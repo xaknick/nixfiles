@@ -6,7 +6,7 @@
 }:
 {
   home.packages = with pkgs; [
-    wezterm
+    #wezterm
     meslo-lgs-nf
     fzf
     ripgrep

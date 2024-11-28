@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -7,6 +7,7 @@
     gcc
     gnumake
     zsh
+    inputs.wezterm.packages.${pkgs.system}.default
   ];
 
   # Configure ZSH
