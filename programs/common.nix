@@ -14,4 +14,6 @@
     wget
     curl
   ];
+
+  programs.firefox.enable = true;
 }

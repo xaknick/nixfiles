@@ -15,6 +15,8 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/nixos/configuration.nix
+
+            ./desktop/kde.nix
             
             ./programs/common.nix
             ./programs/terminal.nix
