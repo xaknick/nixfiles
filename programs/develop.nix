@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     postgresql
     dotnet-sdk_8
     nodejs_18

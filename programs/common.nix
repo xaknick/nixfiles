@@ -1,32 +1,17 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    meslo-lgs-nf
-    fzf
-    ripgrep
-    starship
-    bat
-    eza
-    zoxide
+    git
+    gcc
+    gnumake
     stow
-    just
-    neofetch
-    mc
-    yazi
-    lazygit
     zip
     unzip
     jq
-    cowsay
     file
     which
     tree
-    btop
     wget
     curl
-    ncdu
   ];
 }

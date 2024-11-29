@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     neovim
+    ripgrep # for fuzzy finder
     stylua
     lua-language-server
     xclip # for neovim clipboard

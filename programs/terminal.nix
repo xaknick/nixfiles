@@ -1,13 +1,11 @@
 { inputs, pkgs, ... }:
-
 {
   environment.systemPackages = with pkgs; [
-    git
-    vim
-    gcc
-    gnumake
-    zsh
     inputs.wezterm.packages.${pkgs.system}.default
+    zsh
+    meslo-lgs-nf # fonts
+    fzf # fuzzy finder
+    starship # promt
   ];
 
   # Configure ZSH

@@ -15,8 +15,13 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/nixos/configuration.nix
+            
             ./programs/common.nix
-		./programs/nvim.nix
+            ./programs/terminal.nix
+	    ./programs/nvim.nix
+            ./programs/terminal-tools.nix
+
+            ./programs/develop.nix
           ];
         };
       };
