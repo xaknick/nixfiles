@@ -1,16 +1,5 @@
 { ... }:
 {
-  imports = [
-    ./bootloader.nix
-    ./network.nix
-    ./time-and-culture.nix
-    ./xserver.nix
-    ./users.nix
-    ./hardware.nix
-
-    ./hardware-configuration.nix # Auto-generated
-  ];
-
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
     automatic = true;

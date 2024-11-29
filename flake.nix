@@ -14,7 +14,7 @@
           specialArgs = { inherit inputs; };
           system = "x86_64-linux";
           modules = [
-            ./hosts/nixos/configuration.nix
+            ./hosts/nixos
 
             ./desktop/kde.nix
             
