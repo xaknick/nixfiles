@@ -22,6 +22,7 @@
             ./programs/terminal-tools.nix
 
             ./programs/develop.nix
+            # ./programs/ide.nix
           ];
         };
       };

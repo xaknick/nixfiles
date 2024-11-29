@@ -1,12 +1,6 @@
+{ pkgs, ... }:
 {
-  lib,
-  pkgs,
-  config,
-  ...
-}:
-{
-  home.packages = with pkgs; [ 
-    jetbrains.jdk
+  environment.systemPackages = with pkgs; [
     jetbrains.rider
   ];
 }
