@@ -22,6 +22,7 @@
             ./programs/terminal.nix
 	    ./programs/nvim.nix
             ./programs/terminal-tools.nix
+            ./programs/fonts.nix
 
             ./programs/develop.nix
             # ./programs/ide.nix
