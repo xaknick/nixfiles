@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    firefox
     git
     gcc
     gnumake
@@ -14,6 +15,4 @@
     wget
     curl
   ];
-
-  programs.firefox.enable = true;
 }
