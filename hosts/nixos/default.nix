@@ -5,6 +5,7 @@
     ./network.nix
     ./time-and-culture.nix
     ./xserver.nix
+    ./sddm.nix
     ./users.nix
     ./hardware.nix
 

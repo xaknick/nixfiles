@@ -25,7 +25,6 @@
             ./programs/fonts.nix
 
             ./programs/develop.nix
-            # ./programs/ide.nix
             ./programs/ide.nix
           ];
         };
