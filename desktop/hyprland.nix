@@ -31,10 +31,16 @@
     nwg-look # GTK theme settings
     dolphin
     wev # event viewer for keyboard key detection
+    brightnessctl
+    pyprland
 
     # Network
     iwgtk # GTK configurator
     impala # TUI configurator
+
+    # Sound
+    pamixer
+    pavucontrol
   ];
 
   # Services
