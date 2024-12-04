@@ -24,8 +24,8 @@
     waybar
     fish # for waybar scripts
     rofi-wayland
-    dunst
-    avizo
+    # dunst # simple notification daemon
+    swaynotificationcenter
     wlogout
     libnotify
     nwg-look # GTK theme settings
