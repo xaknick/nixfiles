@@ -14,6 +14,7 @@
     hyprlock
     hypridle
     hyprpaper
+    hyprshot
 
     # Required services or libraries
     qt6.qtwayland
@@ -27,12 +28,13 @@
     avizo
     wlogout
     libnotify
-    nwg-look
+    nwg-look # GTK theme settings
     dolphin
+    wev # event viewer for keyboard key detection
 
     # Network
-    iwgtk
-    impala
+    iwgtk # GTK configurator
+    impala # TUI configurator
   ];
 
   # Services
