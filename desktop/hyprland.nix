@@ -12,6 +12,7 @@
     withUWSM = true;
     xwayland.enable = true;
   };
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
@@ -24,6 +25,7 @@
     hyprpolkitagent
 
     # Required services or libraries
+    kdePackages.breeze-icons
     qt6.qtwayland
     qt5.qtwayland
     poweralertd
@@ -47,6 +49,14 @@
     # Sound
     pamixer
     pavucontrol
+
+    # Common
+    vlc
+    gwenview
+    okular
+    libreoffice-qt6
+    hunspell
+    hunspellDicts.ru_RU
   ];
 
   # Services
@@ -73,4 +83,14 @@
 
   # Force disabling Network Manager
   networking.networkmanager.enable = lib.mkForce false;
+
+  # Thunar file manager
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
 }
