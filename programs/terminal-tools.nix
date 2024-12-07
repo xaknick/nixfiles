@@ -10,6 +10,7 @@
     yazi
     lazygit
     cowsay
+    figlet
     btop
     ncdu
   ];

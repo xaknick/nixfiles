@@ -7,7 +7,6 @@
   };
 
   # Enable Hyprland
-  # services.displayManager.defaultSession = "hyprland";
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -37,7 +36,6 @@
     wlogout
     libnotify
     nwg-look # GTK theme settings
-    dolphin
     wev # event viewer for keyboard key detection
     brightnessctl
     pyprland
