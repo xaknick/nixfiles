@@ -4,7 +4,7 @@
     google-chrome
     gitkraken
     slack
-    thunderbird-latest
+    thunderbird
   ];
 }
 

@@ -27,6 +27,7 @@
 
             ./programs/develop.nix
             ./programs/ide.nix
+            ./programs/work.nix
           ];
         };
       };
