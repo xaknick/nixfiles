@@ -10,4 +10,9 @@
   # Configure ZSH
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+
+  # Configure wezterm
+  environment.variables = {
+    WEZTERM_FONT = "MesloLGS Nerd Font";
+  };
 }
