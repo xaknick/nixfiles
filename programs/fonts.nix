@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
-    meslo-lgs-nf
+    nerd-fonts.meslo-lg
     nerd-font-patcher
     noto-fonts-color-emoji
   ];
