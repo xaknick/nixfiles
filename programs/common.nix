@@ -14,5 +14,6 @@
     tree
     wget
     curl
+    killall
   ];
 }

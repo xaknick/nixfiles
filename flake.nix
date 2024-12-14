@@ -16,7 +16,7 @@
           modules = [
             ./hosts/nixos
 
-            # ./desktop/kde.nix
+            ./desktop/kde.nix
             ./desktop/hyprland.nix
             
             ./programs/common.nix

@@ -42,9 +42,11 @@
     brightnessctl
     pyprland
 
-    # Network
-    iwgtk # GTK configurator
-    impala # TUI configurator
+    # Network by NM (option 1)
+    networkmanagerapplet
+    # Network by iwg (option 2)
+    # iwgtk # GTK configurator
+    # impala # TUI configurator
 
     # Sound
     pamixer
@@ -70,19 +72,23 @@
     ];
   };
   services.mpd.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
-  # Network
-  networking.wireless.iwd = {
-    enable = true;
-    settings = {
-      General = {
-        EnableNetworkConfiguration = true;
-      };
-    };
-  };
 
-  # Force disabling Network Manager
-  networking.networkmanager.enable = lib.mkForce false;
+  # Network by NM (option 1)
+  # networking.networkmanager.enable = lib.mkForce true;
+
+  # Network by iwd (option 2)
+  # networking.wireless.iwd = {
+  #   enable = true;
+  #   settings = {
+  #     General = {
+  #       EnableNetworkConfiguration = true;
+  #     };
+  #   };
+  # };
+  # networking.networkmanager.enable = lib.mkForce false;
 
   # Thunar file manager
   programs.thunar.enable = true;
