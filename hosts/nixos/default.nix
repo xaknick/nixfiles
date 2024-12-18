@@ -6,6 +6,7 @@
     ./time-and-culture.nix
     ./xserver.nix
     ./sddm.nix
+    ./sddm-theme.nix
     ./users.nix
     ./hardware.nix
 
