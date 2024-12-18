@@ -1,5 +1,5 @@
-
-{ pkgs, ... }: let
+{ pkgs, ... }:
+let
   sddm-astronaut = pkgs.sddm-astronaut.override {
     themeConfig = {
       FormPosition = "left";
@@ -11,10 +11,14 @@
       ForceHideCompletePassword = true;
     };
   };
-in {
-  services.displayManager.sddm.theme = "sddm-astronaut-theme";
+  tokyo-night-sddm = pkgs.callPackage ./sddm-tokyo-night.nix { };
+in
+{
+  # services.displayManager.sddm.theme = "sddm-astronaut-theme";
+  services.displayManager.sddm.theme = "tokyo-night-sddm-qt6";
 
   environment.systemPackages = [
     sddm-astronaut
+    tokyo-night-sddm
   ];
 }
