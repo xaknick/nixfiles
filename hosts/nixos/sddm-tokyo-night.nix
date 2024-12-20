@@ -11,8 +11,8 @@ stdenvNoCC.mkDerivation rec {
   src = pkgs.fetchFromGitHub {
     owner = "xaknick";
     repo = "tokyo-night-sddm-qt6";
-    rev = "2054f60e88fe8ac78c3e6f2e5beb33c51cea6a45";
-    hash = "sha256-wm2hSX/8SsUEnle3euqtSg6y0oQnJoe38DX7HmNozfU=";
+    rev = "ffc26208bb6ddd033d1fe945d19b60e4e1b002b2";
+    hash = "sha256-Tk0hXKFT/uE1ncIHSEwIC26Z/wC4wXb/7CnY3lBGzFM=";
   };
 
   dontWrapQtApps = true;

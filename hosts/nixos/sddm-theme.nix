@@ -11,7 +11,13 @@ let
       ForceHideCompletePassword = true;
     };
   };
-  tokyo-night-sddm = pkgs.callPackage ./sddm-tokyo-night.nix { };
+  tokyo-night-sddm = pkgs.callPackage ./sddm-tokyo-night.nix {
+    themeConfig = {
+      Background="Backgrounds/tokyocity.png";
+      FormPosition = "left";
+      PartialBlur = "true";
+    };
+  };
 in
 {
   # services.displayManager.sddm.theme = "sddm-astronaut-theme";
