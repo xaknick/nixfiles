@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     firefox
+    inputs.zen-browser.packages."${pkgs.system}".default
     git
     gcc
     gnumake

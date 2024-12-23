@@ -4,10 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     wezterm.url = "github:wez/wezterm?dir=nix";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
-    { nixpkgs, ... } @ inputs :
+    { nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -18,10 +19,10 @@
 
             ./desktop/kde.nix
             ./desktop/hyprland.nix
-            
+
             ./programs/common.nix
             ./programs/terminal.nix
-	    ./programs/nvim.nix
+            ./programs/nvim.nix
             ./programs/terminal-tools.nix
             ./programs/fonts.nix
 
