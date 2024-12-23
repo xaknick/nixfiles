@@ -5,6 +5,7 @@
     ripgrep # for fuzzy finder
     stylua
     lua-language-server
+    vscode-langservers-extracted # html/css/jsonc lsp
     xclip # for neovim clipboard
     nil # lsp for .nix (nvim)
     nixfmt-rfc-style
