@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   # Enable cachix to avoid Hyprland recompilation
   nix.settings = {
@@ -20,9 +20,9 @@
     hyprcursor
     hyprlock
     hypridle
-    hyprpaper
     hyprshot
     hyprpolkitagent
+    wpaperd
 
     # Required services or libraries
     kdePackages.breeze-icons
@@ -33,7 +33,6 @@
     waybar
     fish # for waybar scripts
     rofi-wayland
-    # dunst # simple notification daemon
     swaynotificationcenter
     wlogout
     libnotify
