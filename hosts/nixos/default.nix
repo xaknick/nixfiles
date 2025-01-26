@@ -9,6 +9,7 @@
     ./sddm-theme.nix
     ./users.nix
     ./hardware.nix
+    ./yubikey.nix
 
     ./nix-configuration.nix
 
