@@ -4,6 +4,7 @@
     firefox
     inputs.zen-browser.packages."${pkgs.system}".default
     git
+    git-crypt
     gcc
     gnumake
     stow
