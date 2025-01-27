@@ -51,7 +51,7 @@
   ];
 
   environment.variables = {
-    DEVCERTS = "$HOME/toolset/devcerts";
+    DEVCERTS = "$HOME/devtoolset/devcerts";
   };
 
   programs.nix-ld.enable = true; # For dynamic linked binaries
