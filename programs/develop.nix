@@ -1,29 +1,24 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    postgresql
-  ];
-
-  virtualisation.docker.enable = true;
-
-  virtualisation.oci-containers = {
-    backend = "docker";
-    containers = {
-      postgres = {
-        image = "postgres:alpine";
-        hostname = "postgres";
-        ports = [ "127.0.0.1:5432:5432" ];
-        environment = {
-          POSTGRES_PASSWORD = "mysecretpassword";
-        };
-      };
-      redis = {
-        image = "redis:alpine";
-        hostname = "redis";
-        ports = [ "127.0.0.1:6379:6379" ];
-      };
-    };
+  services.postgresql = {
+    enable = true;
+    package = pkgs.postgresql_13;
+    authentication = pkgs.lib.mkOverride 10 ''
+      # TYPE  DATABASE        USER            ADDRESS                 METHOD
+      local   all             all                                     trust
+      host    all             all             127.0.0.1/32            trust
+      host    all             all             ::1/128                 trust    
+    '';
+    initialScript = pkgs.writeText "backend-initScript" ''
+      ALTER USER postgres PASSWORD 'mysecretpassword'
+    '';
   };
+
+  services.redis.servers."redis".enable=true;
+  services.redis.servers."redis".port=6379;
+
+  # Docker on NixOS with --rm flag that restarts containers after restarting the Docker daemon
+  virtualisation.docker.enable = true;
 
   security.pki.certificates = [
     ''
@@ -52,6 +47,7 @@
 
   environment.variables = {
     DEVCERTS = "$HOME/devtoolset/devcerts";
+    PSQLTOOlS = "${pkgs.postgresql}/bin/";
   };
 
   programs.nix-ld.enable = true; # For dynamic linked binaries
