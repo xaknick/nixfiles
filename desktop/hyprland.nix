@@ -53,8 +53,8 @@
 
     # Common
     vlc
-    gwenview
-    okular
+    kdePackages.gwenview
+    kdePackages.okular
     libreoffice-qt6
     hunspell
     hunspellDicts.ru_RU
