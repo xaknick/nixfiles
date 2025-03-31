@@ -9,27 +9,32 @@
 
   outputs =
     { nixpkgs, ... }@inputs:
+    let
+      hyprlandEnabled = false; # Set to false to disable Hyprland
+    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs hyprlandEnabled;
+          };
           system = "x86_64-linux";
-          modules = [
-            ./hosts/nixos
-
-            ./desktop/kde.nix
-            ./desktop/hyprland.nix
-
-            ./programs/common.nix
-            ./programs/terminal.nix
-            ./programs/nvim.nix
-            ./programs/terminal-tools.nix
-            ./programs/fonts.nix
-
-            ./programs/develop.nix
-            ./programs/ide.nix
-            ./programs/work.nix
-          ];
+          modules =
+            [
+              ./hosts/nixos
+              ./desktop/kde.nix
+            ]
+            ++ (if hyprlandEnabled then [ ./desktop/hyprland.nix ] else [ ])
+            ++ [
+              ./programs/common.nix
+              ./programs/terminal.nix
+              ./programs/nvim.nix
+              ./programs/terminal-tools.nix
+              ./programs/fonts.nix
+              ./programs/develop.nix
+              ./programs/ide.nix
+              ./programs/work.nix
+            ];
         };
       };
     };
