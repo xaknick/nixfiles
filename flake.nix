@@ -32,8 +32,8 @@
               ./programs/terminal-tools.nix
               ./programs/fonts.nix
               ./programs/develop.nix
-              ./programs/ide.nix
-              ./programs/work.nix
+              # ./programs/ide.nix
+              # ./programs/work.nix
             ];
         };
       };
