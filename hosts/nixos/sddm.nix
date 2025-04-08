@@ -7,6 +7,8 @@
     extraPackages = [
       pkgs.kdePackages.qt5compat
       pkgs.kdePackages.qtsvg
+      pkgs.kdePackages.qtmultimedia
+      pkgs.kdePackages.qtvirtualkeyboard
     ];
   };
 }
